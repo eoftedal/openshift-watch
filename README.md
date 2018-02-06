@@ -17,11 +17,11 @@ $ npm i openshift-watch
 ```javascript
 import OpenshiftWatch from 'openshift-watch';
 
-const pods = new OpenshiftWatch('deploymentconfigs', {
+const deploymentconfigs = new OpenshiftWatch('deploymentconfigs', {
   url: 'https://openshiftserver:8443'   // Kubernetes API URL
 });
 
-pods
+deploymentconfigs
   .on('added', event => {
     console.log('Deployment Config %s added to namespace %s',
       event.metadata.name, event.metadata.namespace);
