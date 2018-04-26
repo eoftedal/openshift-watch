@@ -196,6 +196,9 @@ export default class extends EventEmitter {
         this.emit('error', event);
       }
     });
+    stream.on('end', event => {
+      this.emit('end', event);
+    });
 
     // request options
     const watchRequest = {
