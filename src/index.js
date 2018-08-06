@@ -9,7 +9,8 @@ import pick from 'lodash.pick';
 const defaultEvents = [
   'added',
   'modified',
-  'deleted'
+  'deleted',
+  'error'
 ];
 
 // allowed query parameters to be passed as option
