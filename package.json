@@ -1,6 +1,6 @@
 {
   "name": "openshift-watch",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Watch Openshift resources (fork of kube-watch)",
   "main": "./dist/index.js",
   "scripts": {

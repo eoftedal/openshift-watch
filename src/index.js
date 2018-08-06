@@ -9,8 +9,7 @@ import pick from 'lodash.pick';
 const defaultEvents = [
   'added',
   'modified',
-  'deleted',
-  'error'
+  'deleted'
 ];
 
 // allowed query parameters to be passed as option
@@ -190,6 +189,8 @@ export default class extends EventEmitter {
         const type = event.type.toLowerCase();
         if (events.includes(type)) {
           this.emit(type, event.object);
+        } else if (type == 'error') {
+          this.emit('error', event);  
         }
       }
       else {
